@@ -1,0 +1,64 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Paydirt Counter</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <style>
+        button {
+                -webkit-app-region: no-drag;
+            }
+        </style>
+    </head>
+    <body style="-webkit-app-region: drag" bgcolor="#333333">
+        <button class="mdl-button mdl-js-button" style="float: right;" onclick="quit()">
+            <font color="#cccccc">
+            &#10006;
+            </font>
+        </button>
+        <center>
+            <br><br>
+            <button class="mdl-button mdl-js-button mdl-button--raised" onclick="deposit()">
+                <font color="#cccccc">
+                Deposit
+                </font>
+            </button>
+            <button class="mdl-button mdl-js-button mdl-button--raised" onclick="empty()">
+                <font color="#cccccc">
+                Empty 
+                </font>
+            </button>
+            <font color="#cccccc">
+                <div id="out">
+                    <h3 id="remove">Empty</h3>
+                </div>
+            </font>
+            <script>
+                const remote = require("electron").remote
+                var counter
+                counter = 0
+                function deposit(){
+                    if (counter == 2){
+                        counter = 0
+                        document.getElementById("remove").remove()
+                        document.getElementById("out").innerHTML += '<h3 id="remove"> COLLECT!</h3>'
+                    }
+                    else{
+                        counter++
+                        document.getElementById("remove").remove()
+                        document.getElementById("out").innerHTML += '<h3 id="remove"> Counter: '+counter+'</h3>'
+                    }
+                }
+                function empty(){
+                    counter = 0
+                    document.getElementById("remove").remove()
+                    document.getElementById("out").innerHTML += '<h3 id="remove">Empty</h3>'
+                }
+                function quit(){
+                    window.close()
+                }
+            </script>
+        </center>
+    </body>
+</html>
