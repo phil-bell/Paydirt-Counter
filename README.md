@@ -16,3 +16,9 @@ When using the app, click `deposit` when you add paydirt to the machine. App wil
 
 ## Update 
 Jagex have implemented an ingame paydirt counter in a recent [patch](http://services.runescape.com/m=news/shift-click-drop--qol?oldschool=1), so the usefulness of this app has been changed. #ThanksJagex
+
+## Licence
+Copyright (C) 2017 Philip Bell - All Rights Reserved
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential
+Written by Philip Bell <philhabell@gmail.com>, March 2017
